@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/00-jogo-da-forca/00-jogo-da-forca.iml" filepath="$PROJECT_DIR$/00-jogo-da-forca/00-jogo-da-forca.iml" />
+      <module fileurl="file://$PROJECT_DIR$/01-advinhacao-numero/01-advinhacao-numero.iml" filepath="$PROJECT_DIR$/01-advinhacao-numero/01-advinhacao-numero.iml" />
+      <module fileurl="file://$PROJECT_DIR$/projetos-java-puro.iml" filepath="$PROJECT_DIR$/projetos-java-puro.iml" />
+    </modules>
+  </component>
+</project>
