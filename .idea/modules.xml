@@ -5,7 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/00-jogo-da-forca/00-jogo-da-forca.iml" filepath="$PROJECT_DIR$/00-jogo-da-forca/00-jogo-da-forca.iml" />
       <module fileurl="file://$PROJECT_DIR$/01-advinhacao-numero/01-advinhacao-numero.iml" filepath="$PROJECT_DIR$/01-advinhacao-numero/01-advinhacao-numero.iml" />
       <module fileurl="file://$PROJECT_DIR$/02-jogo-da-forca/02-jogo-da-forca.iml" filepath="$PROJECT_DIR$/02-jogo-da-forca/02-jogo-da-forca.iml" />
-      <module fileurl="file://$PROJECT_DIR$/calculadora/calculadora.iml" filepath="$PROJECT_DIR$/calculadora/calculadora.iml" />
+      <module fileurl="file://$PROJECT_DIR$/calculadora/03-calculadora.iml" filepath="$PROJECT_DIR$/calculadora/03-calculadora.iml" />
       <module fileurl="file://$PROJECT_DIR$/projetos-java-puro.iml" filepath="$PROJECT_DIR$/projetos-java-puro.iml" />
     </modules>
   </component>
