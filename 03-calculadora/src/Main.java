@@ -32,30 +32,50 @@ public class Main {
 
         }
 
-
+        int res;
 
         if (sinal == '+'){
-            int res = n1.getValor() + n2.getValor();
+            res = Somar(n1.getValor(), n2.getValor());
             System.out.printf("O resultado da soma entre %d e %d é: %d", n1.getValor(), n2.getValor(), res);
         }
         else if (sinal == '-'){
-            int res = n1.getValor() - n2.getValor();
+             res = n1.getValor() - n2.getValor();
             System.out.printf("O resultado da subtração entre %d e %d é: %d", n1.getValor(), n2.getValor(), res);
         }
         else if (sinal == '*'){
-            int res = n1.getValor() * n2.getValor();
+             res = n1.getValor() * n2.getValor();
             System.out.printf("O resultado da multiplicação entre %d e %d é: %d", n1.getValor(), n2.getValor(), res);
         }
         else if (sinal == '/'){
-            int res = n1.getValor() / n2.getValor();
+             res = n1.getValor() / n2.getValor();
             System.out.printf("O resultado da divisão entre %d e %d é: %d", n1.getValor(), n2.getValor(), res);
         }
         else {
             System.out.println("Algo deu errado!!!");
         }
 
+
         scanner.close();
 
+    }
 
+    public static int Somar(int valor1, int valor2) {
+        int res = valor1 + valor2;
+        return res;
+    }
+
+    public static int Subtracao(int valor1, int valor2) {
+        int res = valor1 - valor2;
+        return res;
+    }
+
+    public static int Multiplicacao(int valor1, int valor2) {
+        int res = valor1 - valor2;
+        return res;
+    }
+
+    public static int Divisao(int valor1, int valor2) {
+        int res = valor1 - valor2;
+        return res;
     }
 }
