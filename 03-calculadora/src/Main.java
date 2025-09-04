@@ -7,7 +7,7 @@ public class Main {
 
         Numero n1 = new Numero();
         Numero n2 = new Numero();
-        //Numero res = new Numero();
+        int res;
 
 
 
@@ -32,22 +32,20 @@ public class Main {
 
         }
 
-        int res;
-
         if (sinal == '+'){
             res = Somar(n1.getValor(), n2.getValor());
             System.out.printf("O resultado da soma entre %d e %d é: %d", n1.getValor(), n2.getValor(), res);
         }
         else if (sinal == '-'){
-             res = n1.getValor() - n2.getValor();
+            res = Subtracao(n1.getValor(), n2.getValor());
             System.out.printf("O resultado da subtração entre %d e %d é: %d", n1.getValor(), n2.getValor(), res);
         }
         else if (sinal == '*'){
-             res = n1.getValor() * n2.getValor();
+            res = Multiplicacao(n1.getValor(), n2.getValor());
             System.out.printf("O resultado da multiplicação entre %d e %d é: %d", n1.getValor(), n2.getValor(), res);
         }
         else if (sinal == '/'){
-             res = n1.getValor() / n2.getValor();
+            res = Divisao(n1.getValor(), n2.getValor());
             System.out.printf("O resultado da divisão entre %d e %d é: %d", n1.getValor(), n2.getValor(), res);
         }
         else {
@@ -70,12 +68,12 @@ public class Main {
     }
 
     public static int Multiplicacao(int valor1, int valor2) {
-        int res = valor1 - valor2;
+        int res = valor1 * valor2;
         return res;
     }
 
     public static int Divisao(int valor1, int valor2) {
-        int res = valor1 - valor2;
+        int res = valor1 / valor2;
         return res;
     }
 }
