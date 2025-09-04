@@ -5,6 +5,8 @@ public class Main {
 
        Scanner scan=new Scanner(System.in);
 
-       Numero n1=new Numero(0);
+       Numero n1=new Numero();
+       Numero n2=new Numero();
+       Numero res=new Numero();
     }
 }
