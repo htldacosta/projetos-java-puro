@@ -3,10 +3,59 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-       Scanner scan=new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-       Numero n1=new Numero();
-       Numero n2=new Numero();
-       Numero res=new Numero();
+        Numero n1 = new Numero();
+        Numero n2 = new Numero();
+        //Numero res = new Numero();
+
+
+
+        System.out.println("Digite o primeiro numero: ");
+        n1.setValor(scanner.nextInt());
+
+        System.out.println("Digite o segundo numero: ");
+        n2.setValor(scanner.nextInt());
+
+
+        System.out.println("Digite um dos operadores disponivel: + | - | * | / | :");
+        char sinal = scanner.next().charAt(0);
+
+        while(sinal != '+' && sinal != '-' && sinal != '*' && sinal != '/' ) {
+
+            System.out.println("digite um operador valido!");
+
+            System.out.println("o operador: '" + sinal + "' e invalido!");
+
+            System.out.println("escolha um dos operadores disponiveis: + | - | * | / | :");
+            sinal = scanner.next().charAt(0);
+
+        }
+
+
+
+        if (sinal == '+'){
+            int res = n1.getValor() + n2.getValor();
+            System.out.printf("O resultado da soma entre %d e %d é: %d", n1.getValor(), n2.getValor(), res);
+        }
+        else if (sinal == '-'){
+            int res = n1.getValor() - n2.getValor();
+            System.out.printf("O resultado da subtração entre %d e %d é: %d", n1.getValor(), n2.getValor(), res);
+        }
+        else if (sinal == '*'){
+            int res = n1.getValor() * n2.getValor();
+            System.out.printf("O resultado da multiplicação entre %d e %d é: %d", n1.getValor(), n2.getValor(), res);
+        }
+        else if (sinal == '/'){
+            int res = n1.getValor() / n2.getValor();
+            System.out.printf("O resultado da divisão entre %d e %d é: %d", n1.getValor(), n2.getValor(), res);
+        }
+        else {
+            System.out.println("Algo deu errado!!!");
+        }
+
+        scanner.close();
+
+
     }
 }
