@@ -26,6 +26,7 @@ public class Main {
             numeroUsuario = leitor.nextInt();
             escolhaComputador = gerador.nextInt(3) + 1; // Gere um numero entre 1 e 3
 
+            // verifica a escolha do computador
             switch (escolhaComputador) {
                 case 1:
                     System.out.println("Computador escolheu Papel");
@@ -38,6 +39,7 @@ public class Main {
                     break;
             }
 
+            // verifica o vencedor da partida
             if (numeroUsuario == escolhaComputador) {
                 System.out.println("Empate.");
             } else if ((numeroUsuario - escolhaComputador) == -1 ||
@@ -49,6 +51,7 @@ public class Main {
                 pontosComputador++;
             }
         }
+        // verifica o vencedor do jogo
         if (pontosUsuario > pontosComputador) {
             System.out.println("Usuario venceu o jogo.");
         } else if (pontosComputador > pontosUsuario) {
