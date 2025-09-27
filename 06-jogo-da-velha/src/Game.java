@@ -16,9 +16,11 @@ public class Game {
     }
 
     public void executar(){
-        tela();
-        verificarJogador();
-        System.out.println(jogador);
+        do {
+            tela();
+            verificarJogador();
+            jogada();
+        }while (true);
     }
 
     public void tela(){
@@ -49,6 +51,7 @@ public class Game {
 
             if (linhaJogada >= 0 && linhaJogada < 3 && colunaJogada >= 0 && colunaJogada < 3 && tabuleiro[linhaJogada][colunaJogada] == " "){
 
+                preencherTabuleiro(linhaJogada, colunaJogada);
                 break;
             }else {
                 System.out.println("Jogada inválida! Tente novamente!");
@@ -56,5 +59,14 @@ public class Game {
         }while (true);
 
 
+    }
+
+    public String preencherTabuleiro(int linha, int coluna){
+        if (jogador == 0){
+            tabuleiro[linha][coluna] = "O";
+        } else {
+            tabuleiro[linha][coluna] = "X";
+        }
+        return tabuleiro[linha][coluna];
     }
 }
