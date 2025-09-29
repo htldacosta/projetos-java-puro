@@ -6,6 +6,8 @@ public class Game {
 
     String[][] tabuleiro = new String[3][3];
     private int jogador = 0; //0 = e 1 = x
+    private int parada = 1;
+    private int cont = 1;
 
     public Game(){
         for (int i = 0; i < 3; i++){
