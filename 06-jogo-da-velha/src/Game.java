@@ -75,7 +75,19 @@ public class Game {
 
     public void verificarPartida(){
         if (cont < 9){
-
+            for(int i = 0; i < 3; i++){
+                if (tabuleiro[i][0] == tabuleiro[i][1] && tabuleiro[i][0] == tabuleiro[i][2] && tabuleiro[i][0] != " "){
+                    if (jogador == 0) {
+                        tela();
+                        System.out.println("0 '0' Venceu!");
+                        parada = 0;
+                    } else {
+                        tela();
+                        System.out.println("O 'X' Venceu!");
+                        parada = 0;
+                    }
+                }
+            }
         } else {
             tela();
             System.out.println("Empate!");
