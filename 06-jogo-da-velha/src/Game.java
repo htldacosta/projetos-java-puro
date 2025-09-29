@@ -19,6 +19,7 @@ public class Game {
 
     public void executar(){
         do {
+
             tela();
             verificarJogador();
             jogada();
@@ -52,6 +53,7 @@ public class Game {
             System.out.println("Digite a coluna escolhida: ");
             colunaJogada = scanner.nextInt();
 
+
             if (linhaJogada >= 0 && linhaJogada < 3 && colunaJogada >= 0 && colunaJogada < 3 && tabuleiro[linhaJogada][colunaJogada] == " "){
 
                 preencherTabuleiro(linhaJogada, colunaJogada);
@@ -61,6 +63,7 @@ public class Game {
             }
         }while (true);
 
+        //scanner.close();
 
     }
 
@@ -79,6 +82,20 @@ public class Game {
                 if (tabuleiro[i][0] == tabuleiro[i][1] && tabuleiro[i][0] == tabuleiro[i][2] && tabuleiro[i][0] != " "){
                     if (jogador == 0) {
                         tela();
+                        System.out.println("0 0' Venceu!");
+                        parada = 0;
+                    } else {
+                        tela();
+                        System.out.println("O 'X' Venceu!");
+                        parada = 0;
+                    }
+                }
+            }
+
+            for(int i = 0; i < 3; i++){
+                if (tabuleiro[0][i] == tabuleiro[1][i] && tabuleiro[0][i] == tabuleiro[2][i] && tabuleiro[0][i] != " "){
+                    if (jogador == 0) {
+                        tela();
                         System.out.println("0 '0' Venceu!");
                         parada = 0;
                     } else {
@@ -88,6 +105,19 @@ public class Game {
                     }
                 }
             }
+
+            if ((tabuleiro[0][0] == tabuleiro[1][1] && tabuleiro[0][0] == tabuleiro[2][2] && tabuleiro[0][0] != " ") ||
+                    (tabuleiro[2][0] == tabuleiro[1][1] && tabuleiro[2][0] == tabuleiro[0][2] && tabuleiro[2][0] != " ")){
+                if (jogador == 0) {
+                    tela();
+                    System.out.println("0 '0' Venceu!");
+                    parada = 0;
+                } else {
+                    tela();
+                    System.out.println("O 'X' Venceu!");
+                    parada = 0;
+                }
+            }
         } else {
             tela();
             System.out.println("Empate!");
@@ -95,4 +125,5 @@ public class Game {
         }
         cont++;
     }
+
 }
