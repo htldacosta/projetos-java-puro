@@ -22,7 +22,8 @@ public class Game {
             tela();
             verificarJogador();
             jogada();
-        }while (true);
+            verificarPartida();
+        }while (parada != 0);
     }
 
     public void tela(){
@@ -70,5 +71,16 @@ public class Game {
             tabuleiro[linha][coluna] = "X";
         }
         return tabuleiro[linha][coluna];
+    }
+
+    public void verificarPartida(){
+        if (cont < 9){
+
+        } else {
+            tela();
+            System.out.println("Empate!");
+            parada = 0;
+        }
+        cont++;
     }
 }
