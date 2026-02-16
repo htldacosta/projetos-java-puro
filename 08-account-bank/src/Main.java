@@ -13,7 +13,27 @@ public class Main {
 
         do {
 
-        } while ();
+            exibirMenu();
+            opcao = scanner.nextInt();
+
+            switch (opcao) {
+                case 1:
+                    depositar();
+                    break;
+                case 2:
+                    saque();
+                    break;
+                case 3:
+                    verSaldo();
+                    break;
+                case 4:
+                    System.out.println("Saindo do sistema...");
+                    break;
+                default:
+                    System.out.println("Opção inválida! Tente novamente.");
+            }
+
+        } while (opcao != 4);
 
         scanner.close();
 
@@ -40,5 +60,25 @@ public class Main {
             System.out.println("Valor inválido para depósito!");
         }
     }
-    
+
+    private static void saque() {
+        System.out.print("\nDigite o valor para saque: ");
+        double valor = scanner.nextDouble();
+
+        if (valor > 0) {
+            if (valor <= saldo) {
+                saldo -= valor;
+                System.out.printf("Saque de R$%.2f realizado com sucesso!\n");
+            } else {
+                System.out.printf("Saldo insuficiente para realizar o saque! Seu saldo é : R$%.2f\n", saldo);
+            }
+        } else {
+            System.out.println("Valor inválido para saque!");
+        }
+    }
+
+    private static void verSaldo() {
+        System.out.printf("\nSeu saldo atual é : R$%.2f\n", saldo);
+    }
+
 }
