@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
 
     private static double saldo = 0;
@@ -67,8 +65,8 @@ public class Main {
 
         if (valor > 0) {
             if (valor <= saldo) {
-                saldo -= valor;
-                System.out.printf("Saque de R$%.2f realizado com sucesso!\n");
+                saldo= valor;
+                System.out.printf("Saque de R$%.2f realizado com sucesso!\n", valor);
             } else {
                 System.out.printf("Saldo insuficiente para realizar o saque! Seu saldo é : R$%.2f\n", saldo);
             }
