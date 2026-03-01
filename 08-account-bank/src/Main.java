@@ -11,6 +11,24 @@ public class Main {
 
         do {
             showMenu();
+            option = scanner.nextInt();
+
+            try {
+                switch (option) {
+                    case 1:
+                        System.out.print("\nDigite o valor para depósito: ");
+                        double depositAmount = scanner.nextDouble();
+                        account.deposit(depositAmount);
+                        System.out.printf("Depósito de R$.2f realizado com sucesso!\n", depositAmount);
+                        break;
+                    case 2:
+                        System.out.print("\nDigite o valor para saque: ");
+                        double withdrawAmount = scanner.nextDouble();
+                        account.withdraw(withdrawAmount); // Delegamos para o objeto
+                        System.out.printf("Saque de R$%.2f realizado com sucesso!\n", withdrawAmount);
+                        break;
+                }
+            }
         }
     }
 
