@@ -24,12 +24,25 @@ public class Main {
                     case 2:
                         System.out.print("\nDigite o valor para saque: ");
                         double withdrawAmount = scanner.nextDouble();
-                        account.withdraw(withdrawAmount); // Delegamos para o objeto
+                        account.withdraw(withdrawAmount);
                         System.out.printf("Saque de R$%.2f realizado com sucesso!\n", withdrawAmount);
                         break;
+                    case 3:
+                        System.out.printf("\nSeu saldo atual é: R$%.2f\n", account.getBalance());
+                        break;
+                    case 4:
+                        System.out.println("Saindo do sistema...");
+                        break;
+                    default:
+                        System.out.println("Opção inválida! Tente novamente.");
                 }
+
+            } catch (IllegalArgumentException e) {
+                System.out.println("\nErro: " + e.getMessage());
             }
-        }
+        } while (option != 4);
+
+        scanner.close();
     }
 
     private static void showMenu() {
